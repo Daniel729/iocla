@@ -2,16 +2,24 @@
 
 #include <stdio.h>
 
-int main(void)
-{
-	int v[] = {4, 1, 2, -17, 15, 22, 6, 2};
-	int max;
-	int i;
+int main(void) {
+    const int len = 8;
+    int v[] = {4, 1, 2, -17, 15, 22, 6, 2};
+    int max;
+    int i;
 
-	/* TODO: Implement finding the maximum value in the vector */
-	max = v[0];
-	i = 1;
+    max = v[0];
+    i = 1;
 
-	(void) i;
-	(void) max;
+loop:
+    if (i == len) goto end;
+
+    if (max > v[i]) goto cond_false;
+    max = v[i];
+cond_false:
+    i++;
+    goto loop;
+end:
+
+    printf("%d\n", max);
 }
