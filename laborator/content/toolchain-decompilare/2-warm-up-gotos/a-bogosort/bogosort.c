@@ -39,9 +39,9 @@ int main(void)
 
 		if (is_sorted(numbers, 6))
 			/* TODO use goto instead of break */
-			break;
+			goto end;
 	}
-
+end:
 	for (i = 0; i < 6; i++)
 		printf("%d ", numbers[i]);
 	printf("\n");
