@@ -26,5 +26,9 @@ test_one_byte:
 out:
     PRINTF32 `[PRINTF32]: %d\n[printf]: \x0`, ecx
 
+    push ecx
+    push dword printf_string
+    call printf
+    add esp, 12
     leave
     ret
