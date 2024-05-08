@@ -13,6 +13,21 @@ toupper:
     mov ebp, esp
 
     ; TODO
+    mov esi, [ebp + 8]
+    
+start:
+    cmp byte [esi], 'a'
+    jb continue
+
+    cmp byte [esi], 'z'
+    ja continue
+    
+    add byte [esi], 'A' - 'a'
+
+continue:
+    inc esi
+    cmp byte [esi], 0
+    jnz start
 
     leave
     ret
