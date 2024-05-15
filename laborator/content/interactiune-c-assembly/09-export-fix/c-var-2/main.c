@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include "ops.h"
+extern int age;
 
 int main(void)
 {
