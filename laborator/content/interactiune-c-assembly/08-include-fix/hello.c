@@ -1,17 +1,14 @@
 // SPDX-License-Identifier: BSD-3-Clause
-
-static void hi(void)
-{
-	puts("Hi!");
+extern int puts(const char *);
+static void hi(void) {
+    puts("Hi!");
 }
 
-static void bye(void)
-{
-	puts("Bye!");
+static void bye(void) {
+    puts("Bye!");
 }
 
-int main(void)
-{
-	hi();
-	bye();
+int main(void) {
+    hi();
+    bye();
 }
