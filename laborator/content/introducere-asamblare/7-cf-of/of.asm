@@ -5,11 +5,11 @@ section .text
     extern printf
 
 main:
-
     mov al, 0x7F
     PRINTF32 `OF nu e activ\n\x0`
     test al, al
     ;TODO: activati OF
+    add al, 1
     jo overflow_flag
     jmp end
 
