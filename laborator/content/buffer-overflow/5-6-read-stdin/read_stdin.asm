@@ -5,10 +5,14 @@
 ; Buffer is stored on the stack.
 ;
 
+; Ex. 6 Comanda pentru a executa un buffer overflow
+; python -c "print(64*'A'+'\x57\x4F\x4C\x46'[::-1])" | ./read_stdin
+
 extern printf
 extern puts
 extern strlen
-extern gets
+extern fgets
+extern stdin
 
 section .data
     read_message: db "insert buffer string: ", 0
